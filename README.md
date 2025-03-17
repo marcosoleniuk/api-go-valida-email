@@ -6,16 +6,11 @@ Esta é uma API projetada para realizar a validação de e-mails, fornecendo uma
 ## Versão
 - **1.0**
 
-## Autor
-- **Nome:** Marcos Oleniuk
-- **E-mail:** [marcos@moleniuk.com](mailto:marcos@moleniuk.com)
-
-## Licença
-- **Apache 2.0**  
-  [Licença Completa](http://www.apache.org/licenses/LICENSE-2.0.html)
-
-## Termos de Serviço
-[swagger.io/terms](http://swagger.io/terms/)
+## Link de da API em produção
+- **[https://api-email-validation.herokuapp.com/api](https://api-email-validation.herokuapp.com/api)**
+```
+X-API-KEY: {lkWVR82OF5Ffo3VjVlL8GRkXPn5dt261gq7wOfxDUIokVE0nnGcJ5EN1NeNbUliQ}
+```
 
 ## Base Path
 ```
@@ -72,7 +67,7 @@ X-API-KEY: {sua_chave_de_autenticacao}
 - **Query:** `email={email_para_validacao}`
 - **Header:**
 ```
-X-API-KEY: {sua_chave_de_autenticacao}
+X-API-KEY: {lkWVR82OF5Ffo3VjVlL8GRkXPn5dt261gq7wOfxDUIokVE0nnGcJ5EN1NeNbUliQ}
 ```
 
 #### Respostas

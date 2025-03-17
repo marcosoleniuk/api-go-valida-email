@@ -54,11 +54,17 @@ func jsonErrorResponse(c *gin.Context, statusCode int, errorMessage string) {
 func authMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		apiKey := c.GetHeader("X-API-KEY")
+
+		if apiKey == "" {
+			apiKey = c.Param("apiKey")
+		}
+
 		if apiKey != secretKey {
 			jsonErrorResponse(c, http.StatusUnauthorized, "Chave de autenticação inválida")
 			c.Abort()
 			return
 		}
+
 		c.Next()
 	}
 }
