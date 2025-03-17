@@ -172,6 +172,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("Erro ao obter o diretório de trabalho: %v", err)
 	}
+
 	templatePath := filepath.Join(wd, "templates", "*.tmpl")
 	log.Printf("Carregando templates de: %s", templatePath)
 	router.LoadHTMLGlob(templatePath)
