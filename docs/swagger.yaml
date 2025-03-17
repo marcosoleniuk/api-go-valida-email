@@ -1,0 +1,101 @@
+basePath: /api
+definitions:
+  main.BulkEmailRequest:
+    description: Lista de e-mails para validação
+    properties:
+      emails:
+        items:
+          type: string
+        type: array
+    required:
+    - emails
+    type: object
+  main.ValidationResponse:
+    description: Resposta detalhada da validação de e-mails
+    properties:
+      domain:
+        type: string
+      email:
+        type: string
+      error:
+        type: string
+      is_valid:
+        type: boolean
+      validation_type:
+        type: string
+    type: object
+info:
+  contact:
+    email: marcos@moleniuk.com
+    name: Marcos Oleniuk (Autor)
+  description: Resposta detalhada da validação de e-mails
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: API de Validação de E-mails
+  version: "1.0"
+paths:
+  /emails:
+    post:
+      description: Valida uma lista de e-mails passados no corpo da requisição
+      parameters:
+      - description: Lista de e-mails para validação
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/main.BulkEmailRequest'
+      - description: Chave de autenticação
+        in: header
+        name: X-API-KEY
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/main.ValidationResponse'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Valida múltiplos e-mails
+  /valida-email:
+    get:
+      description: Valida um e-mail passado via query string
+      parameters:
+      - description: E-mail para validação
+        in: query
+        name: email
+        required: true
+        type: string
+      - description: Chave de autenticação
+        in: header
+        name: X-API-KEY
+        required: true
+        type: string
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.ValidationResponse'
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties: true
+            type: object
+        "500":
+          description: Internal Server Error
+          schema:
+            additionalProperties: true
+            type: object
+      security:
+      - ApiKeyAuth: []
+      summary: Valida um único e-mail
+swagger: "2.0"

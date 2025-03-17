@@ -22,4 +22,8 @@ go.work
 go.work.sum
 
 # env file
+<<<<<<< HEAD
 .env
+=======
+.env
+>>>>>>> 70587ac (Initial commit)
