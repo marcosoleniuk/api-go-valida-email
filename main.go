@@ -7,15 +7,14 @@
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
 // @BasePath /api
-package handler
+package api_verifica_email_golang
 
 import (
-	_ "api-verifica-email-golang/api/docs"
+	_ "api-verifica-email-golang/docs"
 	"github.com/gin-gonic/gin"
 	_ "github.com/swaggo/files"
 	swaggerfiles "github.com/swaggo/files"
 	"github.com/swaggo/gin-swagger"
-	_ "github.com/tbxark/g4vercel"
 	"github.com/truemail-rb/truemail-go"
 	"log"
 	"net/http"
@@ -55,17 +54,11 @@ func jsonErrorResponse(c *gin.Context, statusCode int, errorMessage string) {
 func authMiddleware() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		apiKey := c.GetHeader("X-API-KEY")
-
-		if apiKey == "" {
-			apiKey = c.Param("apiKey")
-		}
-
 		if apiKey != secretKey {
 			jsonErrorResponse(c, http.StatusUnauthorized, "Chave de autenticação inválida")
 			c.Abort()
 			return
 		}
-
 		c.Next()
 	}
 }
@@ -160,7 +153,7 @@ func handler() {
 
 	configuration, err := truemail.NewConfiguration(
 		truemail.ConfigurationAttr{
-			VerifierEmail:         "marcos@moleniuk.com",
+			VerifierEmail:         "marcos@ajrorato.ind.br",
 			ConnectionTimeout:     3,
 			ResponseTimeout:       3,
 			ConnectionAttempts:    2,
@@ -179,7 +172,6 @@ func handler() {
 	if err != nil {
 		log.Fatalf("Erro ao obter o diretório de trabalho: %v", err)
 	}
-
 	templatePath := filepath.Join(wd, "templates", "*.tmpl")
 	log.Printf("Carregando templates de: %s", templatePath)
 	router.LoadHTMLGlob(templatePath)
