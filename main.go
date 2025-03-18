@@ -1,4 +1,4 @@
-// Package handler @title API de Validação de E-mails
+// @title API de Validação de E-mails
 // @version 1.0
 // @description API para validação de e-mails
 // @contact.name Marcos Oleniuk (Autor)
@@ -7,7 +7,7 @@
 // @license.name Apache 2.0
 // @license.url http://www.apache.org/licenses/LICENSE-2.0.html
 // @BasePath /api
-package api_verifica_email_golang
+package main
 
 import (
 	_ "api-verifica-email-golang/docs"
@@ -148,7 +148,7 @@ func validateEmails(c *gin.Context, configuration *truemail.Configuration) {
 	jsonResponse(c, http.StatusOK, results)
 }
 
-func handler() {
+func main() {
 	gin.SetMode(gin.ReleaseMode)
 
 	configuration, err := truemail.NewConfiguration(
