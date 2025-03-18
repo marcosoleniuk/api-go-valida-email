@@ -6,9 +6,9 @@ Esta é uma API projetada para realizar a validação de e-mails, fornecendo uma
 ## Versão
 - **1.0**
 
-[//]: # (## Link de da API em produção)
+## Link de da API em produção
 
-[//]: # (- **[https://api-email-validation.herokuapp.com/api]&#40;https://api-email-validation.herokuapp.com/api&#41;**)
+- **[https://api-go-valida-email.onrender.com/](https://api-go-valida-email.onrender.com/)**
 
 ## Base Path
 ```
