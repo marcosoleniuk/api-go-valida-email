@@ -6,11 +6,9 @@ Esta é uma API projetada para realizar a validação de e-mails, fornecendo uma
 ## Versão
 - **1.0**
 
-## Link de da API em produção
-- **[https://api-email-validation.herokuapp.com/api](https://api-email-validation.herokuapp.com/api)**
-```
-X-API-KEY: {lkWVR82OF5Ffo3VjVlL8GRkXPn5dt261gq7wOfxDUIokVE0nnGcJ5EN1NeNbUliQ}
-```
+[//]: # (## Link de da API em produção)
+
+[//]: # (- **[https://api-email-validation.herokuapp.com/api]&#40;https://api-email-validation.herokuapp.com/api&#41;**)
 
 ## Base Path
 ```
@@ -67,7 +65,7 @@ X-API-KEY: {sua_chave_de_autenticacao}
 - **Query:** `email={email_para_validacao}`
 - **Header:**
 ```
-X-API-KEY: {lkWVR82OF5Ffo3VjVlL8GRkXPn5dt261gq7wOfxDUIokVE0nnGcJ5EN1NeNbUliQ}
+X-API-KEY: {sua_chave_de_autenticacao}
 ```
 
 #### Respostas
@@ -114,5 +112,9 @@ X-API-KEY: {lkWVR82OF5Ffo3VjVlL8GRkXPn5dt261gq7wOfxDUIokVE0nnGcJ5EN1NeNbUliQ}
 Esta API utiliza autenticação via chave de API. Inclua a seguinte chave no cabeçalho das requisições:
 ```
 X-API-KEY: {lkWVR82OF5Ffo3VjVlL8GRkXPn5dt261gq7wOfxDUIokVE0nnGcJ5EN1NeNbUliQ}
+```
+Ou no Parametro de URL:
+```
+/valida-email?apiKey=lkWVR82OF5Ffo3VjVlL8GRkXPn5dt261gq7wOfxDUIokVE0nnGcJ5EN1NeNbUliQ
 ```
 

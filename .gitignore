@@ -27,3 +27,5 @@ go.work.sum
 =======
 .env
 >>>>>>> 70587ac (Initial commit)
+.idea/
+.vercel

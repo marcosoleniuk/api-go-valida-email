@@ -98,6 +98,8 @@ github.com/swaggo/gin-swagger v1.6.0 h1:y8sxvQ3E20/RCyrXeFfg60r6H0Z+SwpTjMYsMm+z
 github.com/swaggo/gin-swagger v1.6.0/go.mod h1:BG00cCEy294xtVpyIAHG6+e2Qzj/xKlRdOqDkvq0uzo=
 github.com/swaggo/swag v1.16.4 h1:clWJtd9LStiG3VeijiCfOVODP6VpHtKdQy9ELFG3s1A=
 github.com/swaggo/swag v1.16.4/go.mod h1:VBsHJRsDvfYvqoiMKnsdwhNV9LEMHgEDZcyVYX0sxPg=
+github.com/tbxark/g4vercel v0.0.4 h1:KJGsz0/tarMKwEQbBlToAvcUTvPU5XMz1NJ7WpgwHAw=
+github.com/tbxark/g4vercel v0.0.4/go.mod h1:ixnfFruSriTYP/dZ+GxB/hkYMOhmozYkEZ780Ws2Hhk=
 github.com/truemail-rb/truemail-go v1.1.4 h1:1/n5tZ1v6itWkOULErVN0TqCgpZzFItUw48tRxCzwF0=
 github.com/truemail-rb/truemail-go v1.1.4/go.mod h1:rxBjt/Mjb1djuJJicli566lEJ65wkJ16vdb6O4G3xrs=
 github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS4MhqMhdFk5YI=
