@@ -153,7 +153,7 @@ func main() {
 
 	configuration, err := truemail.NewConfiguration(
 		truemail.ConfigurationAttr{
-			VerifierEmail:         "marcos@ajrorato.ind.br",
+			VerifierEmail:         "no-reply@accounts.google.com",
 			ConnectionTimeout:     3,
 			ResponseTimeout:       3,
 			ConnectionAttempts:    2,
